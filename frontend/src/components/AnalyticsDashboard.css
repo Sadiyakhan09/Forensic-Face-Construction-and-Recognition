@@ -1,0 +1,525 @@
+/* Analytics Dashboard Styles */
+.analytics-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.analytics-container {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease;
+}
+
+.analytics-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.analytics-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.analytics-tabs {
+  display: flex;
+  background: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6c757d;
+  transition: all 0.2s;
+  border-bottom: 3px solid transparent;
+}
+
+.tab:hover {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.tab.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+  background-color: white;
+}
+
+.analytics-content {
+  padding: 30px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.loading, .error, .no-data {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.error {
+  color: #dc3545;
+}
+
+/* Overview Tab */
+.overview-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.metric-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #dee2e6;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.metric-card h3 {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #495057;
+  margin: 0;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.chart-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.chart-card h3 {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Gender Chart */
+.gender-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.gender-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.gender-label {
+  min-width: 80px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.bar-container {
+  flex: 1;
+  height: 25px;
+  background: #e9ecef;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  transition: width 0.5s ease;
+}
+
+.gender-count {
+  min-width: 30px;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Similarity Chart */
+.similarity-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.similarity-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.similarity-label {
+  min-width: 120px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.similarity-bar-fill {
+  background: linear-gradient(90deg, #28a745 0%, #ffc107 50%, #dc3545 100%);
+}
+
+.similarity-count {
+  min-width: 30px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Usage Tab */
+.usage-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hourly-chart {
+  display: flex;
+  align-items: end;
+  gap: 8px;
+  height: 200px;
+  padding: 20px 0;
+}
+
+.hourly-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.hour-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6c757d;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.bar-container {
+  width: 100%;
+  height: 150px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: end;
+}
+
+.hourly-bar-fill {
+  width: 100%;
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+  transition: height 0.5s ease;
+}
+
+.hour-count {
+  font-size: 11px;
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Performance Tab */
+.performance-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.trends-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.trend-line {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+}
+
+.trend-line h4 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.trend-data {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.trend-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  min-width: 60px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.trend-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #495057;
+}
+
+.trend-day {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { 
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .analytics-container {
+    width: 95%;
+    max-height: 95vh;
+  }
+  
+  .analytics-content {
+    padding: 20px;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-card {
+    padding: 20px;
+  }
+  
+  .hourly-chart {
+    height: 150px;
+  }
+  
+  .bar-container {
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .analytics-header {
+    padding: 15px;
+  }
+  
+  .analytics-header h2 {
+    font-size: 20px;
+  }
+  
+  .header-actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .tab {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .analytics-content {
+    padding: 15px;
+  }
+  
+  .metric-card {
+    padding: 20px;
+  }
+  
+  .metric-value {
+    font-size: 24px;
+  }
+}
+
+/* Enhanced Chart Styles */
+.chart-container {
+  margin: 20px 0;
+}
+
+.chart-container h4 {
+  margin-bottom: 15px;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bar-label {
+  min-width: 80px;
+  font-size: 0.9rem;
+  color: #4a5568;
+  text-align: right;
+}
+
+.bar-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 25px;
+  background: #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 12px;
+  transition: width 0.3s ease;
+}
+
+.bar-value {
+  position: absolute;
+  right: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.dark-mode .chart-container h4 {
+  color: #e2e8f0;
+}
+
+.dark-mode .bar-label {
+  color: #a0aec0;
+}
+
+.dark-mode .bar-wrapper {
+  background: #4a5568;
+}
+
+.dark-mode .bar-value {
+  color: #e2e8f0;
+}
+
+/* Auto-refresh indicator */
+.header-actions .btn-primary {
+  background: #48bb78;
+  border-color: #38a169;
+}
+
+.header-actions .btn-primary:hover {
+  background: #38a169;
+}
