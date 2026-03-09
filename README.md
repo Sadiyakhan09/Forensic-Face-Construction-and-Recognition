@@ -352,6 +352,3 @@ Visvesvaraya Technological University
 
 This project is developed for **educational and research purposes**.
 
----
-
-If you want, I can also give you **3 improvements that will make this repository look like a top-tier AI project for recruiters (with demo images, architecture diagrams, and badges)**.
