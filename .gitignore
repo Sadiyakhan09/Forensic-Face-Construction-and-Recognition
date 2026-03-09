@@ -60,3 +60,4 @@ deploy.sh
 *.zip
 *.tar.gz
 *.rar
+backend/models/sketch2photo.pth
