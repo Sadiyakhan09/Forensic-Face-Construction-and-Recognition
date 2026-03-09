@@ -261,11 +261,22 @@ http://localhost:3000
 ---
 Output Demonstration
 Sketch Input
-<img src="images/sketch_input.png" width="350">
+<img width="714" height="401" alt="Screenshot 2026-03-09 175942" src="https://github.com/user-attachments/assets/7035dc83-c874-4872-848f-6729071875ad" />
+<img width="730" height="429" alt="Screenshot 2026-03-09 180042" src="https://github.com/user-attachments/assets/ef7883ea-d1e0-4026-910d-7e5a82979702" />
+
+<img width="743" height="381" alt="Screenshot 2026-03-09 180224" src="https://github.com/user-attachments/assets/85620148-3ed4-4113-9087-1ef768f5f6b2" />
+
 Generated Face from Sketch
-<img src="images/generated_face.png" width="350">
-Face Recognition Results
-<img src="images/recognition_results.png" width="700">
+<img width="735" height="407" alt="Screenshot 2026-03-09 180101" src="https://github.com/user-attachments/assets/00956dd5-d1cc-43e0-94de-cb338f730d1d" />
+<img width="731" height="400" alt="Screenshot 2026-03-09 180121" src="https://github.com/user-attachments/assets/1deec1ae-67b2-455e-a578-dae60aea4acd" /> Real time face sketch scanning through Web cam
+<img width="744" height="402" alt="Screenshot 2026-03-09 180251" src="https://github.com/user-attachments/assets/61b3b36a-17a9-468a-8124-08c3dadfabd1" />
+
+
+Face Recognition Analytics
+<img width="719" height="407" alt="Screenshot 2026-03-09 180328" src="https://github.com/user-attachments/assets/017e0015-c7bb-45cf-989b-2d4a2f1d1eaa" />
+<img width="726" height="396" alt="Screenshot 2026-03-09 180310" src="https://github.com/user-attachments/assets/05cbe891-0a2d-4caf-9fa6-779eb84cb3c7" />
+<img width="735" height="403" alt="Screenshot 2026-03-09 180347" src="https://github.com/user-attachments/assets/83c3d492-b5ae-4a8a-9513-579da5d633e5" />
+
 
 The system retrieves the most similar faces from the database.
 
